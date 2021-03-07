@@ -31,8 +31,8 @@ return [
     ],
 
     'payment' => [
-        'stripe' => 'https://stripe.com/',
-        'paddle' => 'https://paddle.com/'
+        'stripeEndpoint' => 'https://stripe.com/',
+        'paddleEndpoint' => 'https://paddle.com/'
     ]
 
 ];
