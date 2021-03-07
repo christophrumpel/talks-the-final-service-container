@@ -30,4 +30,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'payment' => [
+        'stripe' => 'https://stripe.com/',
+        'paddle' => 'https://paddle.com/'
+    ]
+
 ];
