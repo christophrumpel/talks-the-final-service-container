@@ -12,6 +12,6 @@ class CheckoutController extends Controller
 
         // Charge user
 
-        return response('message');
+        return response('nothing charged 😢', 500);
     }
 }
