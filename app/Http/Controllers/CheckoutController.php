@@ -7,11 +7,14 @@ use Illuminate\Http\Response;
 
 class CheckoutController extends Controller
 {
-    public function __invoke(Request $request): Response
-    {
 
+    public function __construct(public Request $request) {}
+
+
+    public function __invoke()
+    {
         // Charge user
 
-        return response('nothing charged 😢', 500);
+        return back()->with('error', 'There was an issue during the payment process 😢');
     }
 }
