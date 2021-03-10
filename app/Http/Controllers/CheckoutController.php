@@ -15,6 +15,19 @@ class CheckoutController extends Controller
     {
         // Charge user
 
-        return back()->with('error', 'There was an issue during the payment process 😢');
+        return $this->redirectWithMessage('error', 'There was an issue during the payment process 😢');
+    }
+
+
+
+
+
+
+
+
+
+    private function redirectWithMessage(string $status, string $message): RedirectResponse
+    {
+        return back()->with($status, $message);
     }
 }
