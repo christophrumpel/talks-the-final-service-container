@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class CheckoutController extends Controller
 {
@@ -11,7 +11,7 @@ class CheckoutController extends Controller
     public function __construct(public Request $request) {}
 
 
-    public function __invoke()
+    public function __invoke(): RedirectResponse
     {
         // Charge user
 
