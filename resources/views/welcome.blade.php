@@ -150,6 +150,8 @@
                             <div class="rounded-md shadow">
                                 <form action="{{ route('post.checkout') }}" method="POST">
                                     @csrf
+                                    <input type="email" name="email" value="chrisoph@talks.at" hidden />
+                                    <input type="text" name="amount" value="911" hidden />
                                     <button type="submit"
                                             class="transition-all w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-purple-900 hover:text-white bg-purple-400 hover:bg-purple-500">
                                         Get Access
