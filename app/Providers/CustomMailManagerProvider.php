@@ -3,22 +3,25 @@
 namespace App\Providers;
 
 use App\Support\CustomMailManager;
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Mail\MailServiceProvider;
 
-class CustomMailManagerProvider extends ServiceProvider
+class CustomMailManagerProvider extends MailServiceProvider
 {
     /**
-     * Register my custom mailer instance.
+     * Register the Illuminate mailer instance.
+     *
+     * @return void
      */
-    public function register(): void
+    protected function registerIlluminateMailer(): void
     {
-        // Same as Illuminate\Mail\MailServiceProvider
         $this->app->singleton('mail.manager', function($app) {
             return new CustomMailManager($app);
         });
 
+        // Copied from Illuminate\Mail\MailServiceProvider
         $this->app->bind('mailer', function ($app) {
             return $app->make('mail.manager')->mailer();
         });
     }
+
 }
