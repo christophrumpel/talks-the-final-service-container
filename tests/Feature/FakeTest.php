@@ -11,8 +11,10 @@ use Tests\TestCase;
 class FakeTest extends TestCase
 {
 
+    /** @test */
     public function it_fakes_my_payment_provider(): void
     {
+        // Mail::
         // fake it
     }
 }
