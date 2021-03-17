@@ -1,5 +1,7 @@
 <?php
 
 return [
-    'currency' => 'USD'
+    'currency' => 'USD',
+
+    'paymentProvider' => ''
 ];
